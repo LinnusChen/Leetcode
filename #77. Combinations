@@ -5,7 +5,6 @@
  */
 int** combine(int n, int k, int* returnSize, int** returnColumnSizes) {
 
-assa
 
 
 }
