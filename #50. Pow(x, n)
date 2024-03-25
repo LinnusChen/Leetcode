@@ -1,0 +1,24 @@
+/**
+
+Implement pow(x, n), which calculates x raised to the power n (i.e., xn).
+
+**/
+
+double myPow(double x, int n) {
+
+    double x_k = x>0?x:(-1)*x;
+    double ans=1, dig=x_k;
+    long N = n;
+    long N_k = N>0?N:(-1)*N;
+
+    while(N_k>0){
+        if(N_k&1==1) ans*=dig;
+        dig*=dig;
+        N_k>>=1;
+    }
+
+    if(x<0 && N%2==1) ans*=-1;
+    if(N<0) ans=(1/ans);
+
+    return ans;
+}
